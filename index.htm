@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="DIGIT" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="noUiSlider-3.2.1/nouislider.fox.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+	<title>Metode Mamdani</title>
+</head>
+
+<body>
+<header>
+    <h1>Metode Mamdani</h1>
+    <p>Sistem Cerdas</p>
+</header>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div id="sidebar" class="span3">
+            <section id="permintaan">
+            <h3>Permintaan</h3>
+            <div class="slider noUiSlider horizontal"></div><br />
+            rentang <input type="number" class="input-mini range-min"/>  <input type="text" class="input-mini range-max"/><br />
+            <ul class="nav">
+                <li class="sedikit">
+                    Sedikit 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                </li>
+                <li class="sedang">
+                    Sedang 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                </li>
+                <li class="banyak">
+                    banyak 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                </li>
+            </ul>
+            </section>
+            <section id="persediaan">
+            <h3>Persediaan</h3>
+            <div class="slider noUiSlider horizontal"></div><br />
+            rentang <input type="number" class="input-mini range-min"/>  <input type="text" class="input-mini range-max"/><br />
+            <ul class="nav">
+                <li class="sedikit">
+                    Sedikit 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                </li>
+                <li class="sedang">
+                    Sedang 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                </li>
+                <li class="banyak">
+                    banyak 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                </li>
+            </ul>
+            </section>
+            <section id="produksi">
+            <h3>Jumlah produksi</h3>
+            <div class="slider noUiSlider horizontal"></div><br />
+            rentang <input type="number" class="input-mini range-min"/>  <input type="text" class="input-mini range-max"/><br />
+            <ul class="nav">
+                <li class="sedikit">
+                    Sedikit 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                    <input type="text" class="input-mini d"/>
+                </li>
+                <li class="banyak">
+                    banyak 
+                    <input type="text" class="input-mini a"/>
+                    <input type="text" class="input-mini b"/>
+                    <input type="text" class="input-mini c"/>
+                    <input type="text" class="input-mini d"/>
+                </li>
+            </ul>
+            </section>
+        </div>
+        <div class="span7">
+            <section id="variasi" class="row-fluid">
+                <div class="span6">
+                    <div class="slider noUiSlider horizontal permintaan"></div><br />
+                Permintaan <input type="text" class="input-mini permintaan"/><br/>
+                </div>
+                <div class="span6">
+                    <div class="slider noUiSlider horizontal persediaan"></div><br />
+                persediaan <input type="text" class="input-mini persediaan"/><br/>       
+                </div>
+            </section>
+            <div class="row-fluid">
+                <div class="span12">
+                <h3>aturan fuzzy</h3>
+                    <section id="rules1">
+                        <select class="permintaan input-medium">
+                        <option>permintaan sedikit</option>
+                        <option>permintaan sedang</option>
+                        <option>permintaan banyak</option>
+                    </select>
+                    and
+                    <select class="persediaan input-medium">
+                        <option>persediaan sedikit</option>
+                        <option>persediaan sedang</option>
+                        <option>persediaan banyak</option>
+                    </select>
+                    Then
+                    <select class="produksi input-medium">
+                        <option>produksi sedikit</option>
+                        <option>produksi banyak</option>
+                    </select>
+                    </section>
+                    <section id="rules2">
+                        <select class="permintaan input-medium">
+                        <option>permintaan sedikit</option>
+                        <option>permintaan sedang</option>
+                        <option>permintaan banyak</option>
+                    </select>
+                    and
+                    <select class="persediaan input-medium">
+                        <option>persediaan sedikit</option>
+                        <option>persediaan sedang</option>
+                        <option>persediaan banyak</option>
+                    </select>
+                    Then
+                    <select class="produksi input-medium">
+                        <option>produksi sedikit</option>
+                        <option>produksi banyak</option>
+                    </select>
+                    </section>   
+                    <section id="rules3">
+                        <select class="permintaan input-medium">
+                        <option>permintaan sedikit</option>
+                        <option>permintaan sedang</option>
+                        <option>permintaan banyak</option>
+                    </select>
+                    and
+                    <select class="persediaan input-medium">
+                        <option>persediaan sedikit</option>
+                        <option>persediaan sedang</option>
+                        <option>persediaan banyak</option>
+                    </select>
+                    Then
+                    <select class="produksi input-medium">
+                        <option>produksi sedikit</option>
+                        <option>produksi banyak</option>
+                    </select>
+                    </section>   
+                    <section id="rules4">
+                        <select class="permintaan input-medium">
+                        <option>permintaan sedikit</option>
+                        <option>permintaan sedang</option>
+                        <option>permintaan banyak</option>
+                    </select>
+                    and
+                    <select class="persediaan input-medium">
+                        <option>persediaan sedikit</option>
+                        <option>persediaan sedang</option>
+                        <option>persediaan banyak</option>
+                    </select>
+                    Then
+                    <select class="produksi input-medium">
+                        <option>produksi sedikit</option>
+                        <option>produksi banyak</option>
+                    </select>
+                    </section>   
+                    <section id="rules5">
+                        <select class="permintaan input-medium">
+                        <option>permintaan sedikit</option>
+                        <option>permintaan sedang</option>
+                        <option>permintaan banyak</option>
+                    </select>
+                    and
+                    <select class="persediaan input-medium">
+                        <option>persediaan sedikit</option>
+                        <option>persediaan sedang</option>
+                        <option>persediaan banyak</option>
+                    </select>
+                    Then
+                    <select class="produksi input-medium">
+                        <option>produksi sedikit</option>
+                        <option>produksi banyak</option>
+                    </select>
+                    </section>   
+                    <section id="rules6">
+                        <select class="permintaan input-medium">
+                        <option>permintaan sedikit</option>
+                        <option>permintaan sedang</option>
+                        <option>permintaan banyak</option>
+                    </select>
+                    and
+                    <select class="persediaan input-medium">
+                        <option>persediaan sedikit</option>
+                        <option>persediaan sedang</option>
+                        <option>persediaan banyak</option>
+                    </select>
+                    Then
+                    <select class="produksi input-medium">
+                        <option>produksi sedikit</option>
+                        <option>produksi banyak</option>
+                    </select>
+                    </section>       
+                </div>
+            </div>
+            
+            <div class="row-fluid">
+                <div class="span4" id="keanggotaan">
+                <h5>Keanggotaan</h5>
+                <ol class="permintaan">
+                    <li>permintaan sedikit : <span class="sedikit">0</span></li>
+                    <li>permintaan sedang : <span class="sedang">0</span></li>
+                    <li>permintaan banyak : <span class="banyak">0</span></li>
+                </ol>
+                
+                <ol class="persediaan">
+                    <li>persediaan sedikit : <span class="sedikit">0</span></li>
+                    <li>persediaan sedang : <span class="sedang">0</span></li>
+                    <li>persediaan banyak : <span class="banyak">0</span></li>
+                </ol>
+                </div>
+                <div class="span4">
+                <h5>nilai tiap rules</h5>
+                <ol id="nilai_rules">
+                    <li>Rules 1 : <span class="1">0</span></li>
+                    <li>Rules 2 : <span class="2">0</span></li>
+                    <li>Rules 3 : <span class="3">0</span></li>
+                    <li>Rules 4 : <span class="4">0</span></li>
+                    <li>Rules 5 : <span class="5">0</span></li>
+                    <li>Rules 6 : <span class="6">0</span></li>
+                </ol>
+                </div>
+                <div class="span4">
+                <h5>Komposisi antar aturan</h5>
+                <ol id="komposisi">
+                    <li>produksi sedikit : <span class="sedikit">0</span></li>
+                    <li>produksi banyak : <span class="banyak">0</span></li>
+                </ol>
+                </div>
+            </div>
+            
+        </div>
+        <div class="span2">
+            <section class="row-fluid">
+                <div class="span12">
+                    <p>Jika saat membuka pertama kali hasilnya <span class="label label-important">NaN</span> harap direfresh sekali lagi</p>
+                </div>
+            </section>
+            <div class="alert alert-success">
+                <section class="row-fluid">
+                        <ul class="nav">
+                            <li>Nilai <span class="label label-info">a1</span> : <span id="a1">0</span></li>
+                            <li>Nilai <span class="label label-info">a2</span> : <span id="a2">0</span></li>
+                        </ul>
+                </section>
+                <section class="row-fluid">
+                    <h5>momen tiap daerah</h5>
+                    <ul class="nav">
+                        <li>M1 : <span id="M1">0</span></li>
+                        <li>M2 : <span id="M2">0</span></li>
+                        <li>M3 : <span id="M3">0</span></li>
+                    </ul>
+                </section>
+                <section class="row-fluid">
+                    <h5>Luas Daerah</h5>
+                    <ul class="nav">
+                        <li>luas A1 : <span id="A1">0</span></li>
+                        <li>luas A2 : <span id="A2">0</span></li>
+                        <li>luas A3 : <span id="A3">0</span></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="row-fluid">
+                    <h5>Hasil Akhir</h5>
+                    <h4 id="Ztotal">0</h4>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Dibuat oleh Imam Khanafi.2013. hak cipta : imam Khanafi</p>
+</footer>
+</body>
+</html>
+<script src="jquery-2.0.0.min.js"></script>
+<script src="noUiSlider-3.2.1/jquery.nouislider.js"></script>
+<script src="jquery.nicescroll.min.js"></script>
+<script src="Setting.js"></script>
+<script src="proses.js"></script>
